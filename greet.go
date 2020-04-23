@@ -17,11 +17,15 @@ limitations under the License.
 package main
 
 import (
-    "fmt"
+	"fmt"
 
-    "github.com/golang/example/stringutil"
+	"code.cloudfoundry.org/lager"
+	"github.com/golang/example/stringutil"
 )
 
 func main() {
-    fmt.Println(stringutil.Reverse("!selpmaxe oG ,olleH"))
+	fmt.Println(stringutil.Reverse("!selpmaxe oG ,olleH"))
+
+	logger := lager.NewLogger("my-app")
+	logger.Info("Just logging, haha!")
 }
